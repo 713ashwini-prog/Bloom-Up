@@ -1,0 +1,11 @@
+{
+  "name": "Bloom-Up",
+  "short_name": "Bloom-Up",
+  "description": "自分のために、今日も一歩前へ。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fffdf5",
+  "theme_color": "#f5c400",
+  "orientation": "portrait",
+  "icons": []
+}
