@@ -3,113 +3,84 @@ const workouts = {
     day: "SUN",
     title: "🌿 リカバリーDAY",
     description: "今週頑張った体をゆっくり整えよう。",
-    url: "https://www.youtube.com/"
+    url: "https://www.youtube.com/watch?v=YpzDOS4_Ffs"
   },
 
   1: {
     day: "MON",
-    title: "🔥 全身トレーニング",
-    description: "週のスタート！全身をしっかり動かそう。",
-    url: "https://www.youtube.com/"
+    title: "🔥 全身START",
+    description: "週のスタート。無理せず全身を動かそう！",
+    url: "https://www.youtube.com/results?search_query=竹脇まりな+全身+宅トレ"
   },
 
   2: {
     day: "TUE",
     title: "🦵 下半身DAY",
-    description: "脚とお尻を中心にトレーニング！",
-    url: "https://www.youtube.com/"
+    description: "脚・お尻を中心にトレーニング！",
+    url: "https://www.youtube.com/results?search_query=竹脇まりな+下半身+トレーニング"
   },
 
   3: {
     day: "WED",
     title: "💃 有酸素DAY",
-    description: "音楽に合わせて楽しく動こう！",
-    url: "https://www.youtube.com/"
+    description: "音楽に合わせて楽しく体を動かそう！",
+    url: "https://www.youtube.com/results?search_query=竹脇まりな+痩せるダンス+有酸素"
   },
 
   4: {
     day: "THU",
-    title: "💪 上半身＆体幹",
-    description: "腕・背中・お腹を鍛えよう！",
-    url: "https://www.youtube.com/"
+    title: "💪 上半身DAY",
+    description: "二の腕・背中をしっかり動かそう！",
+    url: "https://www.youtube.com/watch?v=jnhzbGtJvng"
   },
 
   5: {
     day: "FRI",
     title: "🧘 軽めDAY",
-    description: "一週間の疲れを残さない軽めの運動。",
-    url: "https://www.youtube.com/"
+    description: "疲れを残さないように、軽く整えよう。",
+    url: "https://www.youtube.com/watch?v=YpzDOS4_Ffs"
   },
 
   6: {
     day: "SAT",
     title: "🔥 全身チャレンジ",
     description: "今週の締め！自分のペースで頑張ろう。",
-    url: "https://www.youtube.com/"
+    url: "https://www.youtube.com/results?search_query=竹脇まりな+全身+脂肪燃焼"
   }
 };
 
-
-/* 今日の曜日を取得 */
-
 const today = new Date().getDay();
-
 const workout = workouts[today];
 
-
-/* トレーニング表示 */
-
-document.getElementById("day").textContent =
-  workout.day;
-
-document.getElementById("training-title").textContent =
-  workout.title;
-
+document.getElementById("day").textContent = workout.day;
+document.getElementById("training-title").textContent = workout.title;
 document.getElementById("training-description").textContent =
   workout.description;
-
-document.getElementById("training-link").href =
-  workout.url;
+document.getElementById("training-link").href = workout.url;
 
 
-/* ミッション */
+/* 今日のミッション */
 
-const missions =
-  document.querySelectorAll(".mission input");
-
-const missionMessage =
-  document.getElementById("mission-message");
-
+const missions = document.querySelectorAll(".mission input");
+const missionMessage = document.getElementById("mission-message");
 
 missions.forEach(function(mission) {
-
   mission.addEventListener("change", function() {
 
     const completed =
-      document.querySelectorAll(
-        ".mission input:checked"
-      ).length;
+      document.querySelectorAll(".mission input:checked").length;
 
     if (completed === missions.length) {
-
       missionMessage.textContent =
         "🎉 MISSION COMPLETE！！今日も最高！🌻";
-
     } else if (completed === 0) {
-
       missionMessage.textContent =
         "今日も一歩ずつ🌻";
-
     } else {
-
       missionMessage.textContent =
-        completed +
-        " / " +
-        missions.length +
+        completed + " / " + missions.length +
         " ミッション達成🔥";
-
     }
 
   });
-
 });
