@@ -3,85 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bloom</title>
+  <title>Bloom-Up 🌻</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">🌻 BLOOM</div>
-    <p>昨日より、一歩前へ。</p>
-  </header>
+<header class="header">
+  <div class="logo">🌻 BLOOM-UP</div>
+  <p>昨日より、一歩前へ。</p>
+</header>
 
-  <main>
+<main>
 
-    <section class="hero">
-      <p class="small">TODAY</p>
-      <h1>おかえり、あすぃに。</h1>
-      <p>今日も自分のために、ひとつ積み重ねよう。</p>
-    </section>
+  <section class="hero">
+    <p class="small">TODAY</p>
+    <h1>おかえり、あすぃに。</h1>
+    <p>今日も自分のために、ひとつ積み重ねよう。</p>
+  </section>
 
-    <section class="card">
-      <h2>🔥 今日のミッション</h2>
+  <!-- 今日のトレーニング -->
+  <section class="card training-card">
 
-      <label>
-        <input type="checkbox">
-        <span>運動する</span>
-      </label>
+    <p class="section-label">💪 TODAY'S TRAINING</p>
 
-      <label>
-        <input type="checkbox">
-        <span>勉強する</span>
-      </label>
+    <h2 id="day"></h2>
 
-      <label>
-        <input type="checkbox">
-        <span>水分をとる</span>
-      </label>
+    <div class="training-box">
+      <h3 id="training-title"></h3>
+      <p id="training-description"></p>
+    </div>
 
-      <label>
-        <input type="checkbox">
-        <span>ストレッチする</span>
-      </label>
-    </section>
+    <a id="training-link" href="#" target="_blank" class="main-button">
+      おすすめ動画を見る ▶
+    </a>
 
-    <section class="card coach">
-      <div class="coach-title">
-        <span>💛</span>
-        <h2>COACH</h2>
-      </div>
+  </section>
 
-      <p>
-        「完璧じゃなくていい。<br>
-        昨日の自分より、一歩前へ。」
-      </p>
-    </section>
+  <!-- 今日のミッション -->
+  <section class="card">
 
-    <section class="card">
-      <h2>💪 TRAINING</h2>
-      <p>今日も少しずつ、自分を強く。</p>
+    <p class="section-label">🔥 TODAY'S MISSION</p>
 
-      <button onclick="location.href='#'">
-        トレーニングを見る →
-      </button>
-    </section>
+    <h2>今日のミッション</h2>
 
-    <section class="card">
-      <h2>📚 STUDY</h2>
-      <p>未来の自分のために、今日も積み重ね。</p>
+    <label class="mission">
+      <input type="checkbox">
+      <span>運動する</span>
+    </label>
 
-      <button onclick="location.href='#'">
-        勉強を始める →
-      </button>
-    </section>
+    <label class="mission">
+      <input type="checkbox">
+      <span>勉強する</span>
+    </label>
 
-  </main>
+    <label class="mission">
+      <input type="checkbox">
+      <span>水分をとる</span>
+    </label>
 
-  <footer>
-    <p>🌻 BLOOM</p>
-    <small>Grow every day.</small>
-  </footer>
+    <label class="mission">
+      <input type="checkbox">
+      <span>ストレッチする</span>
+    </label>
+
+    <p id="mission-message" class="mission-message">
+      今日も一歩ずつ🌻
+    </p>
+
+  </section>
+
+  <!-- コーチ -->
+  <section class="card coach">
+
+    <p class="section-label">💛 COACH</p>
+
+    <h2>今日の一言</h2>
+
+    <p class="coach-message">
+      「完璧じゃなくていい。<br>
+      昨日の自分より、一歩前へ。」
+    </p>
+
+  </section>
+
+  <!-- 勉強 -->
+  <section class="card">
+
+    <p class="section-label">📚 STUDY</p>
+
+    <h2>勉強も積み重ね</h2>
+
+    <p>
+      未来の自分のために、今日できることをひとつ。
+    </p>
+
+    <button class="sub-button" onclick="alert('今日も頑張ろう🔥')">
+      勉強を始める →
+    </button>
+
+  </section>
+
+</main>
+
+<footer>
+  <strong>🌻 BLOOM-UP</strong>
+  <p>Grow stronger every day.</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
