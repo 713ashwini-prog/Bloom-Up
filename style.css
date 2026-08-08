@@ -5,36 +5,43 @@
 body {
   margin: 0;
   font-family: Arial, "Hiragino Kaku Gothic ProN", sans-serif;
-  background: #f7f7f5;
+  background: #f5f5f2;
   color: #171717;
 }
 
-header {
+.header {
   background: #ffd21c;
-  padding: 32px 20px 28px;
+  padding: 28px 20px;
   text-align: center;
-  border-bottom: 5px solid #171717;
+  border-bottom: 4px solid #171717;
 }
 
 .logo {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 900;
   letter-spacing: 2px;
 }
 
-header p {
+.header p {
   margin: 8px 0 0;
   font-weight: bold;
 }
 
 main {
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 24px 18px 40px;
+  max-width: 680px;
+  margin: auto;
+  padding: 22px 18px 50px;
 }
 
 .hero {
-  padding: 20px 4px 10px;
+  padding: 15px 4px 20px;
+}
+
+.small,
+.section-label {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 .hero h1 {
@@ -44,12 +51,6 @@ main {
 
 .hero p {
   line-height: 1.7;
-}
-
-.small {
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 3px;
 }
 
 .card {
@@ -62,27 +63,80 @@ main {
 }
 
 .card h2 {
-  margin-top: 0;
-  font-size: 21px;
+  margin: 6px 0 14px;
+  font-size: 23px;
 }
 
-label {
+.training-card {
+  background: #ffd21c;
+}
+
+.training-box {
+  background: white;
+  border: 2px solid #171717;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 15px 0;
+}
+
+.training-box h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.training-box p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.main-button,
+.sub-button {
   display: block;
-  padding: 13px 0;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #171717;
+  border-radius: 10px;
+  background: #171717;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.main-button:hover,
+.sub-button:hover {
+  transform: translateY(-2px);
+}
+
+.mission {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
   border-bottom: 1px solid #ddd;
   font-weight: bold;
 }
 
-label:last-child {
+.mission:last-of-type {
   border-bottom: none;
 }
 
-input[type="checkbox"] {
+.mission input {
   width: 20px;
   height: 20px;
   accent-color: #ffd21c;
-  vertical-align: middle;
-  margin-right: 10px;
+}
+
+.mission input:checked + span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.mission-message {
+  margin-bottom: 0;
+  font-weight: bold;
 }
 
 .coach {
@@ -90,52 +144,44 @@ input[type="checkbox"] {
   color: white;
 }
 
-.coach-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.coach-title h2 {
+.coach .section-label {
   color: #ffd21c;
-  margin: 0;
 }
 
-.coach p {
+.coach-message {
   line-height: 1.9;
   font-weight: bold;
-}
-
-button {
-  width: 100%;
-  margin-top: 10px;
-  padding: 15px;
-  border: 2px solid #171717;
-  border-radius: 10px;
-  background: #ffd21c;
-  color: #171717;
-  font-size: 16px;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-button:hover {
-  transform: translateY(-2px);
+  font-size: 17px;
 }
 
 footer {
-  text-align: center;
-  padding: 30px 20px;
   background: #171717;
   color: white;
+  text-align: center;
+  padding: 28px 20px;
 }
 
-footer p {
+footer strong {
   color: #ffd21c;
-  font-weight: 900;
   letter-spacing: 2px;
 }
 
-footer small {
+footer p {
+  margin-bottom: 0;
   color: #ccc;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 26px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 18px;
+    box-shadow: 4px 4px 0 #171717;
+  }
 }
