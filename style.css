@@ -71,43 +71,88 @@ main {
   background: #ffd21c;
 }
 
-.training-box {
-  background: white;
-  border: 2px solid #171717;
-  border-radius: 12px;
-  padding: 16px;
-  margin: 15px 0;
-}
-
-.training-box h3 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.training-box p {
-  margin-bottom: 0;
-  line-height: 1.6;
-}
-
-.main-button,
-.sub-button {
-  display: block;
+.main-button {
   width: 100%;
   padding: 15px;
   border: 2px solid #171717;
   border-radius: 10px;
   background: #171717;
   color: white;
-  text-align: center;
-  text-decoration: none;
   font-size: 16px;
   font-weight: 900;
   cursor: pointer;
 }
 
-.main-button:hover,
-.sub-button:hover {
+.main-button:hover {
   transform: translateY(-2px);
+}
+
+.back-button {
+  border: 2px solid #171717;
+  border-radius: 10px;
+  background: white;
+  padding: 10px 15px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.training-hero {
+  padding-bottom: 10px;
+}
+
+.training-hero h1 {
+  margin-bottom: 5px;
+}
+
+.video-card {
+  background: white;
+  border: 2px solid #171717;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 5px 5px 0 #171717;
+}
+
+.video-thumbnail {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.video-content {
+  padding: 18px;
+}
+
+.video-category {
+  display: inline-block;
+  background: #ffd21c;
+  border: 2px solid #171717;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.video-content h2 {
+  font-size: 19px;
+  margin: 12px 0 8px;
+}
+
+.video-content p {
+  margin: 5px 0 15px;
+  line-height: 1.6;
+}
+
+.video-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: #171717;
+  color: white;
+  padding: 13px;
+  border-radius: 9px;
+  font-weight: 900;
 }
 
 .mission {
@@ -117,10 +162,6 @@ main {
   padding: 14px 0;
   border-bottom: 1px solid #ddd;
   font-weight: bold;
-}
-
-.mission:last-of-type {
-  border-bottom: none;
 }
 
 .mission input {
@@ -135,7 +176,6 @@ main {
 }
 
 .mission-message {
-  margin-bottom: 0;
   font-weight: bold;
 }
 
@@ -152,6 +192,10 @@ main {
   line-height: 1.9;
   font-weight: bold;
   font-size: 17px;
+}
+
+.hidden {
+  display: none;
 }
 
 footer {
@@ -172,6 +216,7 @@ footer p {
 }
 
 @media (max-width: 480px) {
+
   .logo {
     font-size: 26px;
   }
@@ -182,6 +227,6 @@ footer p {
 
   .card {
     padding: 18px;
-    box-shadow: 4px 4px 0 #171717;
   }
+
 }
