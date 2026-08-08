@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+  background: #f7f7f5;
+  color: #171717;
+}
+
+header {
+  background: #ffd21c;
+  padding: 32px 20px 28px;
+  text-align: center;
+  border-bottom: 5px solid #171717;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin: 8px 0 0;
+  font-weight: bold;
+}
+
+main {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 24px 18px 40px;
+}
+
+.hero {
+  padding: 20px 4px 10px;
+}
+
+.hero h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.hero p {
+  line-height: 1.7;
+}
+
+.small {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.card {
+  background: white;
+  border: 2px solid #171717;
+  border-radius: 16px;
+  padding: 22px;
+  margin-top: 18px;
+  box-shadow: 5px 5px 0 #171717;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 21px;
+}
+
+label {
+  display: block;
+  padding: 13px 0;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+label:last-child {
+  border-bottom: none;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #ffd21c;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.coach {
+  background: #171717;
+  color: white;
+}
+
+.coach-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coach-title h2 {
+  color: #ffd21c;
+  margin: 0;
+}
+
+.coach p {
+  line-height: 1.9;
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+  border: 2px solid #171717;
+  border-radius: 10px;
+  background: #ffd21c;
+  color: #171717;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #171717;
+  color: white;
+}
+
+footer p {
+  color: #ffd21c;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+footer small {
+  color: #ccc;
+}
