@@ -14,7 +14,8 @@
   <p>昨日より、一歩前へ。</p>
 </header>
 
-<main>
+<!-- HOME画面 -->
+<main id="home-page">
 
   <section class="hero">
     <p class="small">TODAY</p>
@@ -22,25 +23,18 @@
     <p>今日も自分のために、ひとつ積み重ねよう。</p>
   </section>
 
-  <!-- 今日のトレーニング -->
   <section class="card training-card">
+    <p class="section-label">💪 TRAINING</p>
+    <h2>今日のトレーニング</h2>
+    <p id="home-training-description">
+      今日のおすすめメニューをチェック！
+    </p>
 
-    <p class="section-label">💪 TODAY'S TRAINING</p>
-
-    <h2 id="day"></h2>
-
-    <div class="training-box">
-      <h3 id="training-title"></h3>
-      <p id="training-description"></p>
-    </div>
-
-    <a id="training-link" href="#" target="_blank" class="main-button">
-      おすすめ動画を見る ▶
-    </a>
-
+    <button class="main-button" onclick="openTraining()">
+      トレーニングを見る →
+    </button>
   </section>
 
-  <!-- 今日のミッション -->
   <section class="card">
 
     <p class="section-label">🔥 TODAY'S MISSION</p>
@@ -73,7 +67,6 @@
 
   </section>
 
-  <!-- コーチ -->
   <section class="card coach">
 
     <p class="section-label">💛 COACH</p>
@@ -87,24 +80,30 @@
 
   </section>
 
-  <!-- 勉強 -->
-  <section class="card">
+</main>
 
-    <p class="section-label">📚 STUDY</p>
 
-    <h2>勉強も積み重ね</h2>
+<!-- TRAINING画面 -->
+<main id="training-page" class="hidden">
 
-    <p>
-      未来の自分のために、今日できることをひとつ。
-    </p>
+  <button class="back-button" onclick="closeTraining()">
+    ← HOMEに戻る
+  </button>
 
-    <button class="sub-button" onclick="alert('今日も頑張ろう🔥')">
-      勉強を始める →
-    </button>
+  <section class="hero training-hero">
+
+    <p class="small">TODAY'S TRAINING</p>
+
+    <h1 id="training-day"></h1>
+
+    <p id="training-description"></p>
 
   </section>
 
+  <section id="video-list"></section>
+
 </main>
+
 
 <footer>
   <strong>🌻 BLOOM-UP</strong>
